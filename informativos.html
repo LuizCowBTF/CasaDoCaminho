@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Centro Espirita Casa do Caminho</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-4">
+                    <img src="img/LOGO.png" alt="Logo Casa do Caminho" style="margin-right: 10px;">
+                    <a href="index.html" class="navbar-brand text-center">
+                        <h3 class="fw-bold mb-0">Centro Espirita<br>Casa do Caminho</h3>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link">Início</a>
+                            <a href="campanhas.html" class="nav-item nav-link">Campanhas</a>
+                            <a href="cultos.html" class="nav-item nav-link">Cultos</a>
+                            <a href="equipe.html" class="nav-item nav-link">Equipe</a>
+                            <a href="informativos.html" class="nav-item nav-link active">Informativos</a>
+                            <a href="servicos.html" class="nav-item nav-link">Serviços</a>
+                            <a href="contatos.html" class="nav-item nav-link">Contatos</a>
+                        </div>
+                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title fw-bold" id="searchModalLabel">Pesquisa por Palavras-Chave</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form id="searchForm" class="mb-4">
+                            <div class="input-group">
+                                <input type="search" 
+                                    id="searchInput" 
+                                    name="q" 
+                                    class="form-control form-control-lg border-primary" 
+                                    placeholder="Digite aqui a palavra-chave de sua busca..."
+                                    autocomplete="off"
+                                    aria-label="Campo de pesquisa"
+                                    required>
+                                <button type="submit" 
+                                        class="btn btn-primary btn-lg" 
+                                        id="searchButton"
+                                        aria-label="Pesquisar">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div id="searchResults" class="container-fluid mt-3" style="display:none;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="mb-0 text-primary">Resultados encontrados:</h4>
+                                <span id="resultsCount" class="badge bg-primary rounded-pill">0 itens</span>
+                            </div>
+                            
+                            <div id="resultsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+                            
+                            <div id="noResults" class="text-center py-5" style="display:none;">
+                                <div class="py-4">
+                                    <i class="fas fa-search fa-4x mb-3 text-muted"></i>
+                                    <h4 class="text-muted">Nenhum resultado encontrado</h4>
+                                    <p class="text-muted">Tente usar termos de pesquisa diferentes</p>
+                                    <button class="btn btn-outline-primary mt-3" onclick="document.getElementById('searchInput').focus()">
+                                        Nova pesquisa
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div id="searchLoading" class="text-center py-4" style="display:none;">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Carregando...</span>
+                                </div>
+                                <p class="mt-2 text-muted">Buscando resultados...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-fluid menu py-5">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Informátivos</small>
+                    <h1 class="display-5 mb-5 text-center">Nossos Boletins Informativos Mensais</h1>
+                </div>
+                <div class="row">
+                    <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                        <h4 class="display-5 mb-5 text-center">Maio de 2025</h4>
+                    </div>
+                </div>
+                <div class="tab-class text-center">
+                    <div class="row">
+                        <div class="col-lg-12 wow bounceInUp text-center">
+                            <button type="button" class="btn btn-play" data-bs-toggle="modal" data-bs-target="#infoModal">
+                                <img class="flex-shrink-0 img-fluid" src="img/informativos/05_2025.png" alt="Informátivo - Maio de 2025">
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills d-inline-flex justify-content-center mt-5 mb-5 wow bounceInUp mt-5" data-wow-delay="0.1s">
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill active" data-bs-toggle="pill" href="#">
+                                <span class="text-dark" style="width: 150px;">Ano de 2025</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-5">
+                        <div id="tab-7" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="menu-item d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded-circle" src="img/infos/2025/info-04-25.png" alt="">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                <button type="button" class="btn btn-play" data-bs-toggle="modal" data-bs-target="#infoModal04">
+                                                    <h4 class="text-primary">ABRIL</h4>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="menu-item d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded-circle" src="img/infos/2025/info-03-25.png" alt="">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                <button type="button" class="btn btn-play" data-bs-toggle="modal" data-bs-target="#infoModal03">
+                                                    <h4 class="text-primary">MARÇO</h4>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="menu-item d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded-circle" src="img/infos/2025/info-02-25.png" alt="">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                <button type="button" class="btn btn-play" data-bs-toggle="modal" data-bs-target="#infoModal02">
+                                                    <h4 class="text-primary">FEVEREIRO</h4>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="menu-item d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded-circle" src="img/infos/2025/info-01-25.png" alt="">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                <button type="button" class="btn btn-play" data-bs-toggle="modal" data-bs-target="#infoModal01">
+                                                    <h4 class="text-primary">JANEIRO</h4>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+
+        <!-- Modal Informativos Start -->
+        <!-- Modal Informativo Destaque Start -->
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Boletim Informativo - Maio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="./pdf/2025/BOLETIM_MAIO.pdf" width="450px" height="400px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Informativo Destaque End -->
+
+        <!-- Modal Informativo Mensal Start -->
+        <div class="modal fade" id="infoModal04" tabindex="-1" aria-labelledby="exampleModalLabel04" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel04">Boletim Informativo - Abril 2025</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="./pdf/2025/BOLETIM_ABRIL.pdf" width="450px" height="400px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="infoModal03" tabindex="-1" aria-labelledby="exampleModalLabel03" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel03">Boletim Informativo - Março 2025</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="./pdf/2025/BOLETIM_MARÇO.pdf" width="450px" height="400px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="infoModal02" tabindex="-1" aria-labelledby="exampleModalLabel02" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel02">Boletim Informativo - Fevereiro 2025</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="./pdf/2025/BOLETIM_FEVEREIRO.pdf" width="450px" height="400px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="infoModal01" tabindex="-1" aria-labelledby="exampleModalLabel01" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel01">Boletim Informativo - Janeiro 2025</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="./pdf/2025/BOLETIM_JANEIRO.pdf" width="450px" height="400px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Informativo Mensal End -->
+        <!-- Modal Informativos End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 ">
+                        <div class="footer-item text-center">
+                            <img src="img/LOGO.png" alt="Logo Casa do Caminho" style="margin: 10px;">
+                            <a href="index.html" class="navbar-brand text-center">
+                                <h3 class="fw-bold mb-0">Centro Espirita<br>Casa do Caminho</h3>
+                            </a>
+                            <div class="footer-icon d-flex align-items-center">
+                                <a href="https://www.facebook.com/cecasadocaminhorj/?locale=pt_BR" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/cecasadocaminhorj/" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@casadocaminhocecctaquara3795" target="_blank" class="btn btn-primary btn-sm-square rounded-circle"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Contate-nos</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Estrada do Cafundá, 3.045 - Taquara <br> Rio de Janeiro - Rio de Janeiro <br>C.E.P.: 22725-030 - BRASIL</p>
+                                <p><i class="fa fa-trademark text-primary me-2"></i> C.N.P.J.: 00.694.459/0001-32</p>
+                                <p><i class="fa fa-phone-alt text-primary me-2"></i> +55 21 2456-6604</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> cecasadocaminho@cecasadocaminho.com.br</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> cecasadocaminho@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center text-md-center mb-5 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Centro Espirita Casa do Caminho</a>, Direitos Reservados.</span>
+                        <br>
+                        <span class="text-light"><i class="fas fa-desktop text-light me-2"></i>Desenvolvimento: Centro Espirita Casa do Caminho junto com nossos Irmãos e Irmãs.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/videos.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Centro Espirita Casa do Caminho</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-4">
+                    <img src="img/LOGO.png" alt="Logo Casa do Caminho" style="margin-right: 10px;">
+                    <a href="index.html" class="navbar-brand text-center">
+                        <h3 class="fw-bold mb-0">Centro Espirita<br>Casa do Caminho</h3>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link">Início</a>
+                            <a href="campanhas.html" class="nav-item nav-link">Campanhas</a>
+                            <a href="cultos.html" class="nav-item nav-link active">Cultos</a>
+                            <a href="equipe.html" class="nav-item nav-link">Equipe</a>
+                            <a href="informativos.html" class="nav-item nav-link">Informativos</a>
+                            <a href="servicos.html" class="nav-item nav-link">Serviços</a>
+                            <a href="contatos.html" class="nav-item nav-link">Contatos</a>
+                        </div>
+                        <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title fw-bold" id="searchModalLabel">Pesquisa por Palavras-Chave</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form id="searchForm" class="mb-4">
+                            <div class="input-group">
+                                <input type="search" 
+                                    id="searchInput" 
+                                    name="q" 
+                                    class="form-control form-control-lg border-primary" 
+                                    placeholder="Digite aqui a palavra-chave de sua busca..."
+                                    autocomplete="off"
+                                    aria-label="Campo de pesquisa"
+                                    required>
+                                <button type="submit" 
+                                        class="btn btn-primary btn-lg" 
+                                        id="searchButton"
+                                        aria-label="Pesquisar">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div id="searchResults" class="container-fluid mt-3" style="display:none;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="mb-0 text-primary">Resultados encontrados:</h4>
+                                <span id="resultsCount" class="badge bg-primary rounded-pill">0 itens</span>
+                            </div>
+                            
+                            <div id="resultsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+                            
+                            <div id="noResults" class="text-center py-5" style="display:none;">
+                                <div class="py-4">
+                                    <i class="fas fa-search fa-4x mb-3 text-muted"></i>
+                                    <h4 class="text-muted">Nenhum resultado encontrado</h4>
+                                    <p class="text-muted">Tente usar termos de pesquisa diferentes</p>
+                                    <button class="btn btn-outline-primary mt-3" onclick="document.getElementById('searchInput').focus()">
+                                        Nova pesquisa
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div id="searchLoading" class="text-center py-4" style="display:none;">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Carregando...</span>
+                                </div>
+                                <p class="mt-2 text-muted">Buscando resultados...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Events Start -->
+        <div class="container-fluid event py-5">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Nossos Vídeos</small>
+                    <h1 class="display-5 mb-5">Palestras, Reuniões Públicas e Grupos de Estudos</h1>
+                </div>
+                <div class="tab-class text-center">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                                <span class="text-dark" style="width: 150px;">Mensagens do CECC</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                                <span class="text-dark" style="width: 150px;">Reuniões Públicas <br> Finados</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                                <span class="text-dark" style="width: 150px;">Reuniões Públicas <br> Aniversário CECC</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
+                                <span class="text-dark" style="width: 150px;">Reuniões Públicas <br> Livro da Esperança</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
+                                <span class="text-dark" style="width: 150px;">Reuniões Públicas <br> Jesus no Lar</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-6">
+                                <span class="text-dark" style="width: 150px;">Reuniões Públicas <br> Boa Nova</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-7">
+                                <span class="text-dark" style="width: 150px;">Evangelho Segundo <br> o Espiritismo</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-8">
+                                <span class="text-dark" style="width: 150px;">O Livro dos <br> Espíritos</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-9">
+                                <span class="text-dark" style="width: 150px;">Grupo Jovem <br> Luiz Sérgio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="d-flex py-2 mx-6 ps-4 pe-4 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-10">
+                                <span class="text-dark" style="width: 150px;">Evangelização <br> Espírita Infantil</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_01.png" alt="Mensagens do CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalA001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.3s">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_01.png" alt="Mensagens do CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalA002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.5s">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_01.png" alt="Mensagens do CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalA003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.7s">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_01.png" alt="Mensagens do CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalA004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_01.png" alt="Mensagens do CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalA005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.3s">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_01.png" alt="Mensagens do CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalA006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3QxVGGYVVAPwxtbQEGpggn3" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_02.png" alt="Reunião Pública - Finados">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Finados</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalB001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_02.png" alt="Reunião Pública - Finados">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - finados</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalB002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_02.png" alt="Reunião Pública - Finados">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Finados</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalB003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Finados">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Finados</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalB004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Finados">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Finados</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalB005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Finados">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Finados</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalB006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3T-YnBIuLCyQ0RMpzonhZ6n" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Aniversário CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Aniversário CECC</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalC001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Aniversário CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Aniversário CECC</h6>
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalC002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Aniversário CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Aniversário CECC</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalC003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Aniversário CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Aniversário CECC</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalC004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Aniversário CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Aniversário CECC</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalC005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_03.png" alt="Reunião Pública - Aniversário CECC">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Aniversário CECC</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalC006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3SCDOEbqDeE507ulq1RWsOw" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_04.png" alt="Reunião Pública - Livro da Esperança">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Reunião Pública - Livro da Esperança</h4>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalD001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_04.png" alt="Reunião Pública - Livro da Esperança">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Reunião Pública - Livro da Esperança</h4>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalD002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_04.png" alt="Reunião Pública - Livro da Esperança">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Reunião Pública - Livro da Esperança</h4>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalD003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_04.png" alt="Reunião Pública - Livro da Esperança">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Reunião Pública - Livro da Esperança</h4>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalD004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_04.png" alt="Reunião Pública - Livro da Esperança">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Reunião Pública - Livro da Esperança</h4>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalD005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_04.png" alt="Reunião Pública - Livro da Esperança">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h4 class="me-auto">Reunião Pública - Livro da Esperança</h4>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalD006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3TpLy8oULebU7Rx0coDAO9f" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_05.png" alt="Reunião Pública - Jesus no Lar">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Jesus no Lar</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalE001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_05.png" alt="Reunião Pública - Jesus no Lar">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Jesus no Lar</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalE002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_05.png" alt="Reunião Pública - Jesus no Lar">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Jesus no Lar</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalE003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_05.png" alt="Reunião Pública - Jesus no Lar">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Jesus no Lar</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalE004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_05.png" alt="Reunião Pública - Jesus no Lar">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Jesus no Lar</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalE005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_05.png" alt="Reunião Pública - Jesus no Lar">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Jesus no Lar</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalE006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3Tdy_lJ3rpeJXFf4y-VkWme" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-6" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_06.png" alt="Reunião Pública - Boa Nova">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Boa Nova</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalF001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_06.png" alt="Reunião Pública - Boa Nova">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Boa Nova</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalF002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_06.png" alt="Reunião Pública - Boa Nova">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Boa Nova</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalF003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_06.png" alt="Reunião Pública - Boa Nova">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Boa Nova</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalF004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos//cultos_06.png" alt="Reunião Pública - Boa Nova">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Boa Nova</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalF005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_06.png" alt="Reunião Pública - Boa Nova">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Reunião Pública - Boa Nova</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalF006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3TcN10wZ3h5PP6HbB4BOrCA" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-7" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_07.png" alt="Evangelho Segundo o Espiritismo">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelho Segundo o Espiritismo</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalG001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_07.png" alt="Evangelho Segundo o Espiritismo">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelho Segundo o Espiritismo</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalG002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_07.png" alt="Evangelho Segundo o Espiritismo">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelho Segundo o Espiritismo</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalG003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_07.png" alt="Evangelho Segundo o Espiritismo">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelho Segundo o Espiritismo</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalG004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_07.png" alt="Evangelho Segundo o Espiritismo">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelho Segundo o Espiritismo</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalG005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_07.png" alt="Evangelho Segundo o Espiritismo">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelho Segundo o Espiritismo</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalG006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3S8RlSmkj78rotVykrbgjBJ" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-8" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_08.png" alt="O Livro dos Espíritos">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">O Livro dos Espíritos</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalH001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_08.png" alt="O Livro dos Espíritos">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">O Livro dos Espíritos</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalH002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_08.png" alt="O Livro dos Espíritos">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">O Livro dos Espíritos</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalH003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_08.png" alt="O Livro dos Espíritos">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">O Livro dos Espíritos</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalH004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_08.png" alt="O Livro dos Espíritos">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">O Livro dos Espíritos</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalH005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_08.png" alt="O Livro dos Espíritos">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">O Livro dos Espíritos</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalH006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3SGiUsQCTS1ugtBL2N-xjEc" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-9" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_09.png" alt="Grupo Jovem Luiz Sérgio">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Grupo jovem Luiz sérgio</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalI001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_09.png" alt="Grupo Jovem Luiz Sérgio">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Grupo Jovem Luiz Sérgio/h6>
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalI002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_09.png" alt="Grupo Jovem Luiz Sérgio">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Grupo Jovem Luiz Sérgio</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalI003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_09.png" alt="Grupo Jovem Luiz Sérgio">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Grupo Jovem Luiz Sérgio</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalI004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_09.png" alt="Grupo Jovem Luiz Sérgio">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Grupo Jovem Luiz Sérgio/h6>
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalI005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_09.png" alt="Grupo Jovem Luiz Sérgio">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Grupo Jovem Luiz Sérgio</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalI006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3RGLGhiuKLLA_9UJBBH2uz4" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-10" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_10.png" alt="Evangelização Infantil">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelização Infantil</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalJ001" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_10.png" alt="Evangelização Infantil">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelização Infantil</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalJ002" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_10.png" alt="Evangelização Infantil">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelização Infantil</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalJ003" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_10.png" alt="Evangelização Infantil">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelização Infantil</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalJ004" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_10.png" alt="Evangelização Infantil">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelização Infantil</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalJ005" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="event-img position-relative">
+                                                <img class="img-fluid rounded w-100" src="img/cultos/cultos_10.png" alt="Evangelização Infantil">
+                                                <div class="event-overlay d-flex flex-column p-4">
+                                                    <h6 class="me-auto">Evangelização Infantil</h6>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModalJ006" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.youtube.com/playlist?list=PLNz8o4sSGu3RV4rxfH8oOrP0C1kDNhBeO" target="_blank" type="button" class="btn btn-primary mt-5">Assista a todos os vídeos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Events End -->
+
+        <!-- Modal Video Start -->
+        <!-- Modal Mensagens do CECC Start -->
+        <div class="modal fade" id="videoModalA001" tabindex="-1" aria-labelledby="videoModalA001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalA001Label">Mensagens do CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TczvYywuLeI?si=TSQWTGh70d4pdXc0" title="MENSAGENS DO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalA002" tabindex="-1" aria-labelledby="videoModalA002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalA002Label">Mensagens do CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/nlfv-QmGv_4?si=MH5zP9zKYMlJ5coe" title="MENSAGENS DO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalA003" tabindex="-1" aria-labelledby="videoModalA003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalA003Label">Mensagens do CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/S7nWUhwrhow?si=YaxiOvN_51aNh8hQ" title="MENSAGENS DO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalA004" tabindex="-1" aria-labelledby="videoModalA004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalA004Label">Mensagens do CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jfJ-ykW1eYY?si=aEubiZ_a7a-TPYzd" title="MENSAGENS DO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalA005" tabindex="-1" aria-labelledby="videoModalA005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalA005Label">Mensagens do CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5jZdkbW4xnI?si=la9t6YsEO5uqcttd" title="MENSAGENS DO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalA006" tabindex="-1" aria-labelledby="videoModalA006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalA006Label">Mensagens do CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vml18_qacX4?si=nxhfg_XCN9ZB7jcI" title="MENSAGENS DO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Mensagens do CECC Start -->
+
+        <!-- Modal Reunião Pública - Finados Start -->
+
+        <div class="modal fade" id="videoModalB001" tabindex="-1" aria-labelledby="videoModalB001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalB001Label">Reunião Pública - Finados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hkyUq4X6sBU?si=saiCdY_9z002noIW" title="REUNIÃO PÚBLICA - FINADOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalB002" tabindex="-1" aria-labelledby="videoModalB002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalB002Label">Reunião Pública - Finados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vlAYJBiR624?si=38aiVNrYknhR_sse" title="REUNIÃO PÚBLICA - FINADOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalB003" tabindex="-1" aria-labelledby="videoModalB003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalB003Label">Reunião Pública - Finados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/QJaburGjTUs?si=-5WZtj48s2LsAyqJ" title="REUNIÃO PÚBLICA - FINADOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalB004" tabindex="-1" aria-labelledby="videoModalB004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalB004Label">Reunião Pública - Finados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LUKOjE6nyrg?si=GvEN0VMKB15vZ4KT" title="REUNIÃO PÚBLICA - FINADOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalB005" tabindex="-1" aria-labelledby="videoModalB005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalB005Label">Reunião Pública - Finados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/g7ZR2eEQED4?si=AT__Izrc2NAMclPc" title="REUNIÃO PÚBLICA - FINADOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalB006" tabindex="-1" aria-labelledby="videoModalB006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalB006Label">Reunião Pública - Finados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/l_oBGa6cVgo?si=uc_U7B6NYF-RGR0D" title="REUNIÃO PÚBLICA - FINADOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Finados End -->
+
+        <!-- Modal Reunião Pública - Aniversário CECC Start -->
+        <div class="modal fade" id="videoModalC001" tabindex="-1" aria-labelledby="videoModalC001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalC001Label">Reunião Pública - Aniversário CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/38ET2MSEKTE?si=n5lz2Y56vxBVeyb6" title="REUNIÃO PÚBLICA - ANIVERSÁRIO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalC002" tabindex="-1" aria-labelledby="videoModalC002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalC002Label">Reunião Pública - Aniversário CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/eFKsRkGMEUI?si=09QOciV6ZkmuzM7v" title="REUNIÃO PÚBLICA - ANIVERSÁRIO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalC003" tabindex="-1" aria-labelledby="videoModalC003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalC003Label">Reunião Pública - Aniversário CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/3uQW-8kewcM?si=ttsaxYBXyA3HHt9c" title="REUNIÃO PÚBLICA - ANIVERSÁRIO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalC004" tabindex="-1" aria-labelledby="videoModalC004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalC004Label">Reunião Pública - Aniversário CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0_70k2EuBDM?si=o8ZKMW6e8S1oCIqW" title="REUNIÃO PÚBLICA - ANIVERSÁRIO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalC005" tabindex="-1" aria-labelledby="videoModalC005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalC005Label">Reunião Pública - Aniversário CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xhOPltbd4mc?si=_Va0jfNNFVv8cQH9" title="REUNIÃO PÚBLICA - ANIVERSÁRIO CECC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalC006" tabindex="-1" aria-labelledby="videoModalC006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalC006Label">Reunião Pública - Aniversário CECC</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Aniversário CECC End -->
+
+        <!-- Modal Reunião Pública - Livro da Esperança Start -->
+        <div class="modal fade" id="videoModalD001" tabindex="-1" aria-labelledby="videoModalD001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalD001Label">Reunião Pública - Livro da Esperança</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4GPCqKynryU?si=oJzO00MKZGThOiZi" title="REUNIÃO PÚBLICA - LIVRO DA ESPERANÇA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalD002" tabindex="-1" aria-labelledby="videoModalD002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalD002Label">Reunião Pública - Livro da Esperança</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4mc8_EOTzUs?si=REWvovKmcqxCVE3y" title="REUNIÃO PÚBLICA - LIVRO DA ESPERANÇA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalD003" tabindex="-1" aria-labelledby="videoModalD003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalD003Label">Reunião Pública - Livro da Esperança</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/6gMb2NiQHxE?si=7VUoxEjQtrm2RP4U" title="REUNIÃO PÚBLICA - LIVRO DA ESPERANÇA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalD004" tabindex="-1" aria-labelledby="videoModalD004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalD004Label">Reunião Pública - Livro da Esperança</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MbjhWXGfaT8?si=UJuAu6Y4paF_AseY" title="REUNIÃO PÚBLICA - LIVRO DA ESPERANÇA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalD005" tabindex="-1" aria-labelledby="videoModalD005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalD005Label">Reunião Pública - Livro da Esperança</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUvo-312UCI?si=U7knP4i8y8elSxAk" title="REUNIÃO PÚBLICA - LIVRO DA ESPERANÇA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalD006" tabindex="-1" aria-labelledby="videoModalD006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalD006Label">Reunião Pública - Livro da Esperança</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fzxyn2A7RpM?si=B0E_4Jzf5h19PKg7" title="REUNIÃO PÚBLICA - LIVRO DA ESPERANÇA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Livro da Esperança End -->
+
+        <!-- Modal Reunião Pública - Jesus no Lar Start -->
+        <div class="modal fade" id="videoModalE001" tabindex="-1" aria-labelledby="videoModalE001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalE001Label">Reunião Pública - Jesus no Lar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/m9yTJe0lXDw?si=W05e6O8bcDCcwBfy" title="REUNIÃO PÚBLICA - JESUS NO LAR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalE002" tabindex="-1" aria-labelledby="videoModalE002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalE002Label"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/a8J0eXlLtR8?si=1RoVNPo01PJDUtEL" title="REUNIÃO PÚBLICA - JESUS NO LAR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalE003" tabindex="-1" aria-labelledby="videoModalE003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalE003Label">Reunião Pública - Jesus no Lar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/q5vdAfENFTo?si=BMz5Tf59j7CDx-ju" title="REUNIÃO PÚBLICA - JESUS NO LAR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalE004" tabindex="-1" aria-labelledby="videoModalE004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalE004Label">Reunião Pública - Jesus no Lar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NVfIKUM2H8U?si=t_2t79RE0cuBAgor" title="REUNIÃO PÚBLICA - JESUS NO LAR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalE005" tabindex="-1" aria-labelledby="videoModalE005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalE005Label">Reunião Pública - Jesus no Lar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/i1Q4OnkYegc?si=OUkmszczFQG9u207" title="REUNIÃO PÚBLICA - JESUS NO LAR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalE006" tabindex="-1" aria-labelledby="videoModalE006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalE006Label">Reunião Pública - Jesus no Lar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ydZZGe8iaqc?si=cA18DoZUNerSk9PP" title="REUNIÃO PÚBLICA - JESUS NO LAR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Jesus no Lar End -->
+
+        <!-- Modal Reunião Pública - Boa Nova Start -->
+        <div class="modal fade" id="videoModalF001" tabindex="-1" aria-labelledby="videoModalF001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalF001Label">Reunião Pública - Boa Nova</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/j1lNaK6_5Cc?si=M2uxoQwTSqp_nxKp" title="REUNIÃO PÚBLICA - BOA NOVA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalF002" tabindex="-1" aria-labelledby="videoModalF002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalF002Label">Reunião Pública - Boa Nova</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YnxHu6skTRY?si=ivKwzAVIpW6crrxs" title="REUNIÃO PÚBLICA - BOA NOVA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalF003" tabindex="-1" aria-labelledby="videoModalF003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalF003Label">Reunião Pública - Boa Nova</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PYHXpcletVI?si=crKjoUSakLOUPcs7" title="REUNIÃO PÚBLICA - BOA NOVA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalF004" tabindex="-1" aria-labelledby="videoModalF004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalF004Label">Reunião Pública - Boa Nova</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wkNpJU5Wnzc?si=VdPIcxuiMhczFZV8" title="REUNIÃO PÚBLICA - BOA NOVA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalF005" tabindex="-1" aria-labelledby="videoModalF005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalF005Label">Reunião Pública - Boa Nova</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wvAe4YDKd4Q?si=odonPUazStPsVfVv" title="REUNIÃO PÚBLICA - BOA NOVA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalF006" tabindex="-1" aria-labelledby="videoModalF006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalF006Label">Reunião Pública - Boa Nova</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/rdSanZNj77w?si=lauUA6ao_rTz6obe" title="REUNIÃO PÚBLICA - BOA NOVA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Boa Nova End -->
+
+        <!-- Modal Reunião Pública - Evangelho Segundo Espiritismo Start -->
+        <div class="modal fade" id="videoModalG001" tabindex="-1" aria-labelledby="videoModalG001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalG001Label">Reunião Pública - Evangelho Segundo Espiritismo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z6whoSPLP4M?si=JQwLwXf7dRS72dtm" title="REUNIÃO PÚBLICA - O EVANGELHO SEGUNDO O ESPIRITISMO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalG002" tabindex="-1" aria-labelledby="videoModalG002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalG002Label">Reunião Pública - Evangelho Segundo Espiritismo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fS41XtqZTio?si=ru6_qGo5AgvPHhP6" title="REUNIÃO PÚBLICA - O EVANGELHO SEGUNDO O ESPIRITISMO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalG003" tabindex="-1" aria-labelledby="videoModalG003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalG003Label">Reunião Pública - Evangelho Segundo Espiritismo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0TkLSrMGHEA?si=-ehSNphtdVE_pAwi" title="REUNIÃO PÚBLICA - O EVANGELHO SEGUNDO O ESPIRITISMO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalG004" tabindex="-1" aria-labelledby="videoModalG004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalG004Label">Reunião Pública - Evangelho Segundo Espiritismo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TEC-l608c7A?si=uawaanZlxzB72PDP" title="REUNIÃO PÚBLICA - O EVANGELHO SEGUNDO O ESPIRITISMO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalG005" tabindex="-1" aria-labelledby="videoModalG005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalG005Label">Reunião Pública - Evangelho Segundo Espiritismo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/h6YAfwHdJ_o?si=-ZKaMgEBLOot6oCg" title="REUNIÃO PÚBLICA - O EVANGELHO SEGUNDO O ESPIRITISMO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalG006" tabindex="-1" aria-labelledby="videoModalG006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalG006Label">Reunião Pública - Evangelho Segundo Espiritismo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/AzG7nwBk-70?si=4FdL6vUQIgYyy2Ng" title="REUNIÃO PÚBLICA - O EVANGELHO SEGUNDO O ESPIRITISMO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Evangelho Segundo Espiritismo End -->
+
+        <!-- Modal Reunião Pública - Livro dos Espíritos Start -->
+        <div class="modal fade" id="videoModalH001" tabindex="-1" aria-labelledby="videoModalH001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalH001Label">Reunião Pública - Livro dos Espíritos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBin4zzBHw?si=Am-mbUO5kKT9o-AW" title="REUNIÃO PÚBLICA - O LIVRO DOS ESPIRITOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalH002" tabindex="-1" aria-labelledby="videoModalH002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalH002Label">Reunião Pública - Livro dos Espíritos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/tqQQjq2B6yc?si=Ont2oBK-LDmCMzA0" title="REUNIÃO PÚBLICA - O LIVRO DOS ESPIRITOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalH003" tabindex="-1" aria-labelledby="videoModalH003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalH003Label">Reunião Pública - Livro dos Espíritos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aylsY1oEcfk?si=RVSeDHUKAkvMENfd" title="REUNIÃO PÚBLICA - O LIVRO DOS ESPIRITOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalH004" tabindex="-1" aria-labelledby="videoModalh004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalH004Label">Reunião Pública - Livro dos Espíritos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2OnuZpmIHhk?si=y4MqTGJrSvplU785" title="REUNIÃO PÚBLICA - O LIVRO DOS ESPIRITOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalH005" tabindex="-1" aria-labelledby="videoModalH005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalH005Label">Reunião Pública - Livro dos Espíritos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/8eDYL6vygVg?si=DWTS7PJjHsiZzu2L" title="REUNIÃO PÚBLICA - O LIVRO DOS ESPIRITOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalH006" tabindex="-1" aria-labelledby="videoModalH006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalH006Label">Reunião Pública - Livro dos Espíritos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aPUdfaGuaNg?si=H78w5FVneGCN9VmY" title="REUNIÃO PÚBLICA - O LIVRO DOS ESPIRITOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Livro dos Espíritos End -->
+
+        <!-- Modal Reunião Pública - Grupo Jovem Luiz Sergio Start -->
+        <div class="modal fade" id="videoModalI001" tabindex="-1" aria-labelledby="videoModalI001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalI001Label">Reunião Pública - Grupo Jovem Luiz Sergio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/loeQ3hwcmpQ?si=pHK5DIGGwfWege2w" title="REUNIÃO PÚBLICA - GRUPO JOVEM LUIZ SÉRGIO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalI002" tabindex="-1" aria-labelledby="videoModalI002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalI002Label">Reunião Pública - Grupo Jovem Luiz Sergio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/L84GFOHLZzQ?si=fZj4gCjIXtw448fB" title="REUNIÃO PÚBLICA - GRUPO JOVEM LUIZ SÉRGIO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalI003" tabindex="-1" aria-labelledby="videoModalI003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalI003Label">Reunião Pública - Grupo Jovem Luiz Sergio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/XPO-6cJA0is?si=_Vkv6ZTXz3-UdDnH" title="REUNIÃO PÚBLICA - GRUPO JOVEM LUIZ SÉRGIO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalI004" tabindex="-1" aria-labelledby="videoModalI004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalI004Label">Reunião Pública - Grupo Jovem Luiz Sergio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pC-1dvG7ljM?si=FnnifjsaBfMZCuOk" title="REUNIÃO PÚBLICA - GRUPO JOVEM LUIZ SÉRGIO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalI005" tabindex="-1" aria-labelledby="videoModalI005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalI005Label">Reunião Pública - Grupo Jovem Luiz Sergio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/D4hT-qLA04g?si=tOYXO__XQY6xCLj8" title="REUNIÃO PÚBLICA - GRUPO JOVEM LUIZ SÉRGIO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalI006" tabindex="-1" aria-labelledby="videoModalI006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalI006Label">Reunião Pública - Grupo Jovem Luiz Sergio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/st-npwfVYTM?si=vT11gPNh8sgDOOLh" title="REUNIÃO PÚBLICA - GRUPO JOVEM LUIZ SÉRGIO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Grupo Jovem Luiz Sergio End -->
+
+        <!-- Modal Reunião Pública - Evangelizacao Infantil Start -->
+        <div class="modal fade" id="videoModalJ001" tabindex="-1" aria-labelledby="videoModalJ001Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalJ001Label">Reunião Pública - Evangelizacao Infantil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/3cvBCaeXm4g?si=L1oCfPzpDyds_CAf" title="REUNIÃO PÚBLICA - EVANGELIZAÇÃO INFANTIL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalJ002" tabindex="-1" aria-labelledby="videoModalJ002Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalJ002Label">Reunião Pública - Evangelizacao Infantil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/CiWVK5xj5qc?si=g4EsxzTT-Y4pSLHR" title="REUNIÃO PÚBLICA - EVANGELIZAÇÃO INFANTIL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalJ003" tabindex="-1" aria-labelledby="videoModalJ003Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalJ003Label">Reunião Pública - Evangelizacao Infantil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vWFJABVxZe0?si=aBepme5mHacaVWtg" title="REUNIÃO PÚBLICA - EVANGELIZAÇÃO INFANTIL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalJ004" tabindex="-1" aria-labelledby="videoModalJ004Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalJ004Label">Reunião Pública - Evangelizacao Infantil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/30gN_fDnNO4?si=BCCGoJDt0w5C_kTT" title="REUNIÃO PÚBLICA - EVANGELIZAÇÃO INFANTIL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalJ005" tabindex="-1" aria-labelledby="videoModalJ005Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalJ005Label"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/urgMQRi8D00?si=ma7RgoRVw5K5IRPQ" title="REUNIÃO PÚBLICA - EVANGELIZAÇÃO INFANTIL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModalJ006" tabindex="-1" aria-labelledby="videoModalJ006Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalJ006Label">Reunião Pública - Evangelizacao Infantil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TFdDBQ7hb84?si=T8uyX5PpUac5PTKZ" title="REUNIÃO PÚBLICA - EVANGELIZAÇÃO INFANTIL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Reunião Pública - Evangelizacao Infantil End -->
+        <!-- Modal Video End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 ">
+                        <div class="footer-item text-center">
+                            <img src="img/LOGO.png" alt="Logo Casa do Caminho" style="margin: 10px;">
+                            <a href="index.html" class="navbar-brand text-center">
+                                <h3 class="fw-bold mb-0">Centro Espirita<br>Casa do Caminho</h3>
+                            </a>
+                            <div class="footer-icon d-flex align-items-center">
+                                <a href="https://www.facebook.com/cecasadocaminhorj/?locale=pt_BR" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/cecasadocaminhorj/" target="_blank" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@casadocaminhocecctaquara3795" target="_blank" class="btn btn-primary btn-sm-square rounded-circle"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="footer-item">
+                            <h4 class="mb-4">Contate-nos</h4>
+                            <div class="d-flex flex-column align-items-start">
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Estrada do Cafundá, 3.045 - Taquara <br> Rio de Janeiro - Rio de Janeiro <br>C.E.P.: 22725-030 - BRASIL</p>
+                                <p><i class="fa fa-trademark text-primary me-2"></i> C.N.P.J.: 00.694.459/0001-32</p>
+                                <p><i class="fa fa-phone-alt text-primary me-2"></i> +55 21 2456-6604</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> cecasadocaminho@cecasadocaminho.com.br</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> cecasadocaminho@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center text-md-center mb-5 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Centro Espirita Casa do Caminho</a>, Direitos Reservados.</span>
+                        <br>
+                        <span class="text-light"><i class="fas fa-desktop text-light me-2"></i>Desenvolvimento: Centro Espirita Casa do Caminho junto com nossos Irmãos e Irmãs.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/videos.js"></script>
+    </body>
+
+</html>
