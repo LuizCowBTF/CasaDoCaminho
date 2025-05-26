@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				titulo: "Reunião Pública",
 				tipo: "Evento",
 				link: "eventos.html",
-				descricao: "Cultos semanais com palestras e passes todas as segundas e sextas às 20h.",
+				descricao: "Reuniões semanais com palestras e passes todas as segundas e sextas às 20h.",
 				tags: "culto palestra passe"
 			},
 			{
